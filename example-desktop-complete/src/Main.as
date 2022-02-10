@@ -6,7 +6,6 @@ import com.tuarua.CaptureBtn;
 import com.tuarua.DevToolsBtn;
 import com.tuarua.ForwardBtn;
 import com.tuarua.FreSharp;
-import com.tuarua.FreSwift;
 import com.tuarua.FullscreenBtn;
 import com.tuarua.JsBtn;
 import com.tuarua.RefreshBtn;
@@ -63,7 +62,6 @@ import views.TabBar;
 public class Main extends Sprite {
     public static const FONT:Font = new FiraSansSemiBold();
     private var freSharpANE:FreSharp = new FreSharp(); // must create before all others
-    private var freSwiftANE:FreSwift = new FreSwift(); // must create before all others
     private var webView:WebView;
 
     private var backBtn:SimpleButton = new BackBtn();
@@ -582,7 +580,6 @@ public class Main extends Sprite {
      */
     private function onExiting(event:Event):void {
         WebView.dispose();
-        FreSwift.dispose();
         FreSharp.dispose();
     }
 
